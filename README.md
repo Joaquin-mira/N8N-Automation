@@ -34,7 +34,7 @@ Highlights 💥
 🐘 Persistent storage in PostgreSQL, allowing audit and threat hunting.
 🏰 Persistent logs for every intrusion, alerts via Gmail API to notify the SOC team, and automated IP blocking to reduce Mean Time To Respond (MTTR) and enable real-time defense.
 
-**💻Automated Static & Dynamic File Analysis ** <br>
+**💻Automated Static & Dynamic File Analysis** <br>
 This project is a DFIR system designed to perform automated multi-layered file analysis using Python (integrating various INFOSEC-specific Python libraries), Docker Sandboxing and LLM orchestration. <br>
 A Python-based watchdog service monitors specific system directories in real-time. Upon detection of a new file it executes a dual-stage analysis: Static (Calculating Shannon entropy, signature-based detection based on YARA rules and checking existing databases) and dynamic (executing the file in an isolated environment to capture behavioral logs). The intel is sent via webhook to N8N, where the AI agent evaluates the collected forensic data. The system determines the threat level and stores the results in SQL. If a threat is in fact detected, a secondary AI agent generates remediation steps to reduce MTTR 
 <br>
@@ -42,7 +42,17 @@ Highlights 💥
 <br>
 🔬 Hybrid inspection for better security <br>
 🤖 self-hosted AI to interpret complex sandbox logs and identify suspicious patterns <br>
-🛡️ 100% self-hosted (orchestraton and AI) to maximize privacy and data security.<br>
+🛡️ 100% self-hosted (orchestration and AI) to maximize privacy and data security.<br>
 🐍 Python-driven metadata extraction  ensures high-fidelity data input for the AI. <br>
 🐘 Persistent storage in PostgreSQL for every analysis for audit and threat hunting purposes. <br>
 
+**📊AI-Powered Financial Forensic Auditor**
+<br>
+This project is a financial fraud detection system focused on identifying "Split Purchase" schemes. It integrates synthetic data generation,  SQL analytical querying, and AI-driven forensics. The system uses Python scripting to seed a PostgreSQL database with thousands of legitimate transactions and specific "planted" fraud cases designed to bypass standard audit thresholds (in this case, the threshold is that ammounts greater than $5000 must be reviewed and approved). An n8n pipeline then orchestrates the detection phase using Common Table Expressions (CTE) to reconstruct fragmented transactions. Finally, a self-hosted AI agent (Llama 3) acts as a Forensic Auditor to analyze the flagged data, and helps distinguish between administrative noise and malicious intent to generate an executive summary.
+<br>
+Highlights 💥
+<br>
+🧪 Controlled data seeding to simulate high-fidelity fraud scenarios.<br>
+🔍 SQL forensic logic using CTEs and aggregation to identify threshold patterns.<br>
+🤖 self-hosted AI auditor that interprets transaction data to separate fraud from noise.<br>
+🛡️ 100% self-hosted (orchestration and AI) to maximize privacy and data security.<br>
