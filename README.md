@@ -1,4 +1,5 @@
-# N8N-Automation
+# Automation-Scripts
+
 This projects are just PoC to learn, practice and experiment on both workflow automation (via code) and AI-integrated workflow automation.
 <br>
 I'm doing all of this by self-hosting both an N8N instance and an AI model (Ollama llama3) that works as a SOC analyst.
